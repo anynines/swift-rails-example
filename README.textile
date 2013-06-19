@@ -23,9 +23,9 @@ h2. Code Walkthrough
 ** performs the actual test (perform_test)
 ** generates a hash containing test outputs
 ** the test consists of 3 steps:
-# create a test directory (create_test_directory)
-# upload an example file (upload_example_file) (uploads the public/404.html as example file)
-# delete the example file again (delete_example_file)
+*** create a test directory (create_test_directory)
+*** upload an example file (upload_example_file) (uploads the public/404.html as example file)
+*** delete the example file again (delete_example_file)
 
 
 h3. Local execution
@@ -33,5 +33,5 @@ h3. Local execution
 At first you have to create a tenant with the according rights on your Swift Installation.
 To be able to execute the application from outside a cloud foundry installation, you have to specify the VCAP_SERVICES environment variable at startup (exchange the dummies with your credentials):
 
-VCAP_SERVICES='{"swift-1.0":[{"name":"swift-50e83","label":"swift-1.0","plan":"free","credentials":{"name":"f757c956-cb76-4591-9c2f-ea963ae27006","authentication_uri":"https://auth.hydranodes.de:5000/v2.0/","user_name":"d0b7c1cd-7251-4e2d-a3a4-6ca09bfb1076.swift.user@a9s.eu","user_id":"2339d7937c174677a00b9a9ebccb7a99","password":"5xZgwalgILRLO75oooma","tenant_name":"f757c956-cb76-4591-9c2f-ea963ae27006.swift.tenant@a9s.eu","tenant_id":"6e6f2875c476415999ea4e151eb1f1d2","availability_zone":"nova","authentication_version":"v2"}}]}' rails s
+VCAP_SERVICES='{"swift-1.0":[{"name":"swift-50e83","label":"swift-1.0","plan":"free","credentials":{"name":"name","authentication_uri":"https://auth.example.com:5000/v2.0/","user_name":"user_name","user_id":"user_id","password":"password","tenant_name":"tenant_name","tenant_id":"tenant_id","availability_zone":"nova","authentication_version":"v2"}}]}' rails s
 

@@ -17,7 +17,7 @@
     <file path="/temp.rb" changelist="d8840c37-25aa-47d1-9716-3261f71a0ac7" time="1371650249013" ignored="false" />
     <file path="/read_environment.html.erb" changelist="d8840c37-25aa-47d1-9716-3261f71a0ac7" time="1371653724668" ignored="false" />
     <file path="/swift_controller_test.rb" changelist="d8840c37-25aa-47d1-9716-3261f71a0ac7" time="1371653830696" ignored="false" />
-    <file path="/README.textile" changelist="d8840c37-25aa-47d1-9716-3261f71a0ac7" time="1371654958289" ignored="false" />
+    <file path="/README.textile" changelist="d8840c37-25aa-47d1-9716-3261f71a0ac7" time="1371655616807" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,26 @@
     <favorites_list name="swift_test" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="test_swift.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/swift/test_swift.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="30" selection-start="238" selection-end="238" vertical-scroll-proportion="-3.3333333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.textile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.textile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="112" selection-start="1803" selection-end="1803" vertical-scroll-proportion="0.7621145">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -517,14 +536,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="835" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -662,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/swift/test_swift.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="238" selection-end="238" vertical-scroll-proportion="0.20454545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/performance/browsing_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -704,9 +716,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/swift/test_swift.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="30" selection-start="238" selection-end="238" vertical-scroll-proportion="-3.3333333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.textile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="23" selection-start="1373" selection-end="1373" vertical-scroll-proportion="1.1101322">
+        <state line="35" column="112" selection-start="1803" selection-end="1803" vertical-scroll-proportion="0.7621145">
           <folding />
         </state>
       </provider>
