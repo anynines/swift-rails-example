@@ -1,0 +1,9 @@
+<h1>SwiftController#read_environment</h1>
+<h2>Environment Variables visible to the application</h2>
+<table>
+	<% ENV.each_pair do |k,v| %>
+		<tr>
+		<td><%= k %></td><td><%= v %></td>
+		</tr>
+	<% end %>
+</table>
