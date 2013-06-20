@@ -1,0 +1,4 @@
+h1. v0.1.0
+* basic features
+** read_environment: prints out a list of environment variables
+** test_swift: create directory, upload file, delete file on Swift storage
