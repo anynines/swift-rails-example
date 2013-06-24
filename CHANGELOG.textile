@@ -1,3 +1,8 @@
+h1. v0.1.1
+* create a temporary url for a file located in a private directory
+* create a public directory on swift
+* removes test file deletion
+
 h1. v0.1.0
 * basic features
 ** read_environment: prints out a list of environment variables

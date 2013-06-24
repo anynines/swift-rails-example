@@ -18,14 +18,15 @@ h2. Code Walkthrough
 ** wrapper around the fog gem API
 ** create/delete directories on a swift instance
 ** upload/download/delete files from/to a swift instance
+** create temporary urls
+** set directories to private/public
 
 * Swift::SwiftTest
 ** performs the actual test (perform_test)
 ** generates a hash containing test outputs
-** the test consists of 3 steps:
-*** create a test directory (create_test_directory)
-*** upload an example file (upload_example_file) (uploads the public/404.html as example file)
-*** delete the example file again (delete_example_file)
+** the test consists of 2 steps:
+*** create public and private test directories (create_private_test_directory, create_public_test_directory)
+*** upload one example file to each directory (upload_example_file_1, upload_example_file_2)
 
 
 h3. Local execution

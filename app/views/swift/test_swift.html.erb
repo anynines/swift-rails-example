@@ -1,12 +1,13 @@
 <h1>SwiftController#test_swift</h1>
 </br>
-<p><h3>Step1: Created the test directory</h3></p>
-<p><b>Directory name:</b> <%= @hash[:dirname] %></p>
-<p><b>Directory list before uploading the test file:</b> <%= @hash[:list_before] %></p>
+<p><h3>Step1: Created the test directories</h3></p>
+<p><b>Private directory name:</b> <%= @hash[:dirname_private] %></p>
+<p><b>Public directory name:</b> <%= @hash[:dirname_public] %></p>
 </br>
-<p><h3>Step2: Uploaded the test file to test directory</h3></p>
-<p><b>Directory list after uploading the test file:</b> <%= @hash[:list_after] %></p>
-<p><b>Uploaded file url:</b> <%= @hash[:file_url] %></p>
-</br>
-<p><h3>Step3: Deleted the test file</h3></p>
-<p><b>Directory list after file deletion:</b> <%= @hash[:list_after_delete] %></p>
+<p><h3>Step2: Uploaded the test files to the test directories</h3></p>
+<p><b>Private directory listing:</b> <%= @hash[:directory_contents_private] %></p>
+<p><b>Public directory listing:</b> <%= @hash[:directory_contents_public]%></p>
+<br>
+<p><b>Public file url:</b> <a href="<%= @hash[:public_file_url] %>"><%= @hash[:public_file_url] %></a></p>
+<p><b>Private file temporary url:</b> <a href="<%= @hash[:private_file_temp_url] %>"><%= @hash[:private_file_temp_url] %></a></p>
+

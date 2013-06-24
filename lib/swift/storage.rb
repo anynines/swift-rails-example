@@ -9,10 +9,11 @@ module Swift
          :hp_auth_uri =>  'https://auth.hydranodes.de:5000/v2.0/',
          :hp_use_upass_auth_style => true,
          :hp_avl_zone => 'nova',
-         :hp_auth_version => :v2
-      })
+         :hp_auth_version => :v2,
+      }, account_meta_key)
         
       @connection = Fog::Storage.new(fog_options)
+      @account_meta_key = account_meta_key
     end
   
     def c
@@ -63,6 +64,38 @@ module Swift
     def delete_file(id, dir = test)
       file = @connection.directories.get(dir).files.get(id)
       file.destroy
+    end
+
+    def create_temp_url(file, account_meta_key = @account_meta_key)
+      # Generate tempURL
+      method      = 'GET'
+
+      # Expires in 600sec
+      expires     = Time.now.to_i + 600
+      public_url  = URI(file.public_url)
+      base        = "#{public_url.scheme}://#{public_url.host}/"
+      path        = public_url.path
+
+      hmac_body   = "#{method}\n#{expires}\n#{path}"
+      sig         = Digest::HMAC.hexdigest(hmac_body, account_meta_key, Digest::SHA1)
+
+      "#{file.public_url}?temp_url_sig=#{sig}&temp_url_expires=#{expires}"
+    end
+
+    def make_directory_public(directory)
+      unless directory.public?
+        directory.public = true
+        return directory.save
+      end
+      true
+    end
+
+    def make_directory_private(directory)
+      if directory.public?
+        directory.public = false
+        return directory.save
+      end
+      true
     end
 
   end
