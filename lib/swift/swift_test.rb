@@ -84,16 +84,16 @@ module Swift
       file = @storage.upload_file dirname, file_location, file_name
     end
 
-    # uploads the 404.html file to the given directory
+    # uploads the picture.jpg file to the given directory
     def upload_example_file_1(dirname)
-      file_location = Rails.root.to_s + "/public/404.html"
-      upload_file file_location, "404.html", dirname
+      file_location = Rails.root.to_s + "/public/picture.jpg"
+      upload_file file_location, "picture.jpg", dirname
     end
 
-    # uploads the robots.txt file to the given directory
+    # uploads the public/swift_test.html file to the given directory
     def upload_example_file_2(dirname)
-      file_location = Rails.root.to_s + "/public/robots.txt"
-      upload_file file_location, "robots.txt", dirname
+      file_location = Rails.root.to_s + "/public/swift_test.html"
+      upload_file file_location, "swift_test.html", dirname
     end
 
     # deletes the file referenced by the given file descriptor
@@ -106,7 +106,7 @@ module Swift
     # generates a temporary url for the given file
     # returns a url as string
     def generate_temp_url(file)
-      create_temp_url file
+      @storage.create_temp_url file
     end
 
     # fog swift configuration ----------------------------
