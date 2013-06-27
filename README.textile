@@ -28,6 +28,77 @@ h2. Code Walkthrough
 *** create public and private test directories (create_private_test_directory, create_public_test_directory)
 *** upload one example file to each directory (upload_example_file_1, upload_example_file_2)
 
+h3. Anynines deployment
+For installing the test application you have to bind a mysql and a swift service instance to the application.
+
+$> cf push
+Name> swift
+
+Instances> 1
+
+1: 64M
+2: 128M
+3: 256M
+4: 512M
+5: 1G
+Memory Limit> 2
+
+Creating swift... OK
+
+1: swift
+2: none
+Subdomain> swift
+
+1: de.a9sapp.eu
+2: none
+Domain> de.a9sapp.eu
+
+Binding swift.de.a9sapp.eu to swift... OK
+
+Create services for application?> y
+
+1: mongodb 2.0
+2: mysql 5.5
+3: postgresql 9.0
+4: rabbitmq 2.8
+5: redis 2.2
+6: swift 1.0
+What kind?> 6
+
+Name?> swift-15f97
+
+1: free: free plan
+Which plan?> 1
+
+Creating service swift-15f97... OK
+Binding swift-15f97 to swift... OK
+Create another service?> y
+
+1: mongodb 2.0
+2: mysql 5.5
+3: postgresql 9.0
+4: rabbitmq 2.8
+5: redis 2.2
+6: swift 1.0
+What kind?> 2
+
+Name?> mysql-f1300
+
+1: 100: Shared server, shared VM, 1MB memory, 10MB storage, 10 connections
+Which plan?> 1
+
+Creating service mysql-f1300... OK
+Binding mysql-f1300 to swift... OK
+Create another service?> n
+
+Bind other services to application?> n
+
+Save configuration?> n
+
+Uploading swift... OK
+.....
+  1/1 instances: 1 running
+OK
 
 h3. Local execution
 
@@ -36,3 +107,9 @@ To be able to execute the application from outside a cloud foundry installation,
 
 VCAP_SERVICES='{"swift-1.0":[{"name":"swift-50e83","label":"swift-1.0","plan":"free","credentials":{"name":"name","authentication_uri":"https://auth.example.com:5000/v2.0/","user_name":"user_name","user_id":"user_id","password":"password","tenant_name":"tenant_name","tenant_id":"tenant_id","availability_zone":"nova","authentication_version":"v2"}}]}' rails s
 
+h3. Test the example application
+Show the environment variables controller:
+<base_url>/swift/read_environment
+
+Execute the Swift storage tests and show the outputs:
+<base_url>/swift/test_swift
