@@ -114,9 +114,10 @@ module Swift
     # reads the swift credentials from the environment variable
     # returns a hash with the credentials delivered by the VCAP_SERVICES env variable
     def get_swift_credentials_hash
-      vcap_services_env_str = ENV["VCAP_SERVICES"]
-      vcap_services_hash = hash = JSON.parse vcap_services_env_str
-      swift_credentials_hash = vcap_services_hash["swift-1.0"].first["credentials"]
+      vcap_services_env_str   = ENV["VCAP_SERVICES"]
+      raise "please set ENV variable VCAP_SERVICES" unless vcap_services_env_str
+      vcap_services_hash      = JSON.parse vcap_services_env_str
+      swift_credentials_hash  = vcap_services_hash["swift-1.0"].first["credentials"]
     end
 
     # creates a valid fog configuration hash from the credentials retrieved from the
